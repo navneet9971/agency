@@ -186,8 +186,9 @@ const ServicesPage = () => {
       <Section
         id="services-list"
         aria-label="Detailed services"
-        className="py-12 sm:py-16 md:py-20 bg-white"
+        className="py-12 sm:py-16 md:py-20 bg-white relative overflow-hidden"
       >
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.10),_transparent_55%)]" />
         <div className="max-w-fullhd mx-auto space-y-6 sm:space-y-8">
           <motion.div
             {...fadeUp(0)}
@@ -200,7 +201,7 @@ const ServicesPage = () => {
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
                 {pageData?.services?.title || "Website Development Services Built for Fast Performance and Business Growth"}
               </h2>
-              <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500 max-w-xl">
+              <p className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-base text-gray-500 max-w-2xl">
                 {pageData?.services?.description ? (
                   <>
                     {pageData.services.description.split(/(\{service\}|\{website\}|\{caseStudies\}|\{webDevelopment\})/).map((part, idx) => {
@@ -227,7 +228,7 @@ const ServicesPage = () => {
 
           <motion.div
             {...fadeUp(0.05)}
-            className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2"
           >
             {services.map((service, index) => (
               <Link
@@ -241,69 +242,80 @@ const ServicesPage = () => {
                   whileInView="animate"
                   viewport={{ once: true, amount: 0.2 }}
                   variants={cardVariants}
-                  whileHover={{ y: -4 }}
-                  className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-0 shadow-[0_18px_40px_rgba(15,23,42,0.04)] cursor-pointer"
+                  whileHover={{ y: -6 }}
+                  className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] cursor-pointer"
                 >
-                {/* Service Image */}
-                {serviceImageMap[service.id] && (
-                  <motion.div 
-                    className="relative w-full h-64 sm:h-72 md:h-80 z-0"
-                    custom={index}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true, amount: 0.2 }}
-                    variants={imageVariants}
-                  >
-                    <Image
-                      src={`/service/${serviceImageMap[service.id]}`}
-                      alt={service.title || "Service image"}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </motion.div>
-                )}
-  
-                {/* Title only - always visible at bottom of image */}
-                {serviceImageMap[service.id] && (
-                <div
-                  className="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-5 md:p-6 flex flex-col justify-end pointer-events-none"
-                  style={{
-                    background: "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)",
-                  }}
-                >
-                  <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white">
-                    {service.title}
-                  </h3>
-                </div>
-                )}
-                {/* Full details - visible on hover only */}
-                {serviceImageMap[service.id] && (
-                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 sm:p-5 md:p-6 flex flex-col justify-end pointer-events-none">
-                  <div className="max-w-full">
-                    <div className="flex items-center gap-2 mb-2 flex-wrap">
-                      <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">
-                        {service.tag}
-                      </span>
-                      <span className="text-[9px] sm:text-[10px] rounded-full border border-white/30 px-2 py-0.5 text-white/80">
-                        {service.meta}
-                      </span>
+                  <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)]">
+                    {/* Left: Copy */}
+                    <div className="p-5 sm:p-6 md:p-7">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-emerald-700">
+                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                          {service.tag}
+                        </span>
+                        <span className="inline-flex rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[10px] sm:text-[11px] text-gray-600">
+                          {service.meta}
+                        </span>
+                      </div>
+
+                      <h3 className="mt-4 text-base sm:text-lg md:text-xl font-semibold tracking-tight text-gray-900">
+                        {service.title}
+                      </h3>
+
+                      <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-3">
+                        {service.summary}
+                      </p>
+
+                      <div className="mt-4 flex items-center justify-between gap-4">
+                        <div className="text-[10px] sm:text-xs text-gray-500 line-clamp-1">
+                          <span className="font-medium text-gray-800">{pageData?.services?.outcome || "Outcome:"}</span>{" "}
+                          <span>{service.outcome}</span>
+                        </div>
+                        <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-medium text-emerald-700">
+                          <span>Explore</span>
+                          <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-white/90 mb-2 leading-relaxed line-clamp-2">
-                      {service.summary}
-                    </p>
-                    <div className="text-[10px] sm:text-xs text-white/80">
-                      <span className="font-medium text-white">
-                        {pageData?.services?.outcome || "Outcome:"}
-                      </span>{" "}
-                      <span className="line-clamp-1">{service.outcome}</span>
+
+                    {/* Right: Image */}
+                    <div className="relative md:min-h-[240px] min-h-[200px]">
+                      {serviceImageMap[service.id] ? (
+                        <motion.div
+                          className="absolute inset-0 z-0"
+                          custom={index}
+                          initial="initial"
+                          whileInView="animate"
+                          viewport={{ once: true, amount: 0.2 }}
+                          variants={imageVariants}
+                        >
+                          <Image
+                            src={`/service/${serviceImageMap[service.id]}`}
+                            alt={service.title || "Service image"}
+                            fill
+                            className="object-cover md:rounded-tr-3xl md:rounded-br-3xl group-hover:scale-[1.02] transition-transform duration-300"
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent md:rounded-tr-3xl md:rounded-br-3xl" />
+                        </motion.div>
+                      ) : (
+                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-white md:rounded-tr-3xl md:rounded-br-3xl" />
+                      )}
+
+                      {/* Hover details on image */}
+                      <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 md:rounded-tr-3xl md:rounded-br-3xl">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent md:rounded-tr-3xl md:rounded-br-3xl" />
+                        <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 pointer-events-none">
+                          <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-white/70">
+                            {service.tag}
+                          </p>
+                          <p className="mt-2 text-xs sm:text-sm text-white/90 leading-relaxed line-clamp-3">
+                            {service.summary}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                )}
                 </motion.article>
               </Link>
             ))}

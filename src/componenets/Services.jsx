@@ -72,18 +72,20 @@ const Services = () => {
     <Section
       id="services"
       aria-label="Services we offer"
-      className="py-6 sm:py-8 md:py-10 lg:py-12 bg-white"
+      className="py-10 sm:py-12 md:py-14 lg:py-16 bg-white"
     >
+      {/* Subtle background */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.10),_transparent_55%)]" />
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12 lg:mb-14">
-        <div className="space-y-2 sm:space-y-3 max-w-7xl">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-7 sm:mb-9 md:mb-10 lg:mb-12">
+        <div className="space-y-2 sm:space-y-3 max-w-6xl">
           <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-gray-500">
             {t?.services?.badge || "Services"}
           </p>
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-gray-900">
             {t?.services?.title || "Website Development Services Built for Fast Performance and Business Growth"}
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-6xl">
+          <p className="text-xs sm:text-sm md:text-base text-gray-500 max-w-4xl">
             {t?.services?.description ? (
               <>
                 {t.services.description.split(/(\{website\}|\{portfolio\}|\{caseStudies\})/).map((part, idx) => {
@@ -106,12 +108,12 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Services Grid with hover tooltips */}
+      {/* Services Grid */}
       {loading && servicesList.length === 0 ? (
-        <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-2 md:grid-cols-3">
+        <div className="grid gap-4 sm:gap-5 md:gap-6 grid-cols-1 md:grid-cols-2">
           {/* Loading skeleton */}
           {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="h-48 bg-gray-100 animate-pulse rounded-2xl" />
+            <div key={i} className="h-64 bg-gray-100 animate-pulse rounded-2xl" />
           ))}
         </div>
       ) : (
@@ -131,69 +133,80 @@ const Services = () => {
               whileInView="animate"
               viewport={{ once: true, amount: 0.2 }}
               variants={cardVariants}
-              whileHover={{ y: -4 }}
-              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-sm p-0 shadow-[0_18px_40px_rgba(15,23,42,0.04)] cursor-pointer"
+              whileHover={{ y: -6 }}
+              className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-100 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.06)] cursor-pointer"
             >
-            {/* Service Image */}
-            {hasImage && (
-              <motion.div 
-                className="relative w-full h-64 sm:h-72 md:h-80 z-0"
-                custom={index}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={imageVariants}
-              >
-                <Image
-                  src={`/service/${serviceImageMap[imageKey] || serviceImageMap[service.id]}`}
-                  alt={service.title || service.label || "Service image"}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </motion.div>
-            )}
-
-            {/* Title only - always visible at bottom of image */}
-            {hasImage && (
-            <div
-              className="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-5 md:p-6 flex flex-col justify-end pointer-events-none"
-              style={{
-                background: "linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.4) 60%, transparent 100%)",
-              }}
-            >
-              <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white">
-                {service.title || service.label}
-              </h3>
-            </div>
-            )}
-            {/* Full details - visible on hover only */}
-            {hasImage && (
-            <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 sm:p-5 md:p-6 flex flex-col justify-end pointer-events-none">
-              <div className="max-w-full">
-                <div className="flex items-center gap-2 mb-2 flex-wrap">
-                  <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">
+            <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)]">
+              {/* Left: Copy */}
+              <div className="p-5 sm:p-6 md:p-7">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-emerald-700">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
                     {service.tag}
                   </span>
-                  <span className="text-[9px] sm:text-[10px] rounded-full border border-white/30 px-2 py-0.5 text-white/80">
+                  <span className="inline-flex rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[10px] sm:text-[11px] text-gray-600">
                     {service.meta}
                   </span>
                 </div>
-                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">
+
+                <h3 className="mt-4 text-base sm:text-lg md:text-xl font-semibold tracking-tight text-gray-900">
                   {service.title || service.label}
                 </h3>
-                <p className="text-xs sm:text-sm text-white/90 mb-2 leading-relaxed line-clamp-2">
+
+                <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed line-clamp-3">
                   {service.summary || service.description}
                 </p>
-                <div className="text-[10px] sm:text-xs text-white/80">
-                  <span className="font-medium text-white">
-                    {t?.services?.outcome || "Outcome:"}
-                  </span>{" "}
-                  <span className="line-clamp-1">{service.outcome}</span>
+
+                <div className="mt-4 flex items-center justify-between gap-4">
+                  <div className="text-[10px] sm:text-xs text-gray-500 line-clamp-1">
+                    <span className="font-medium text-gray-800">{t?.services?.outcome || "Outcome:"}</span>{" "}
+                    <span>{service.outcome}</span>
+                  </div>
+                  <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-medium text-emerald-700">
+                    <span>Explore</span>
+                    <span className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: Image */}
+              <div className="relative md:min-h-[240px] min-h-[200px]">
+                {hasImage ? (
+                  <motion.div
+                    className="absolute inset-0 z-0"
+                    custom={index}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={imageVariants}
+                  >
+                    <Image
+                      src={`/service/${serviceImageMap[imageKey] || serviceImageMap[service.id]}`}
+                      alt={service.title || service.label || "Service image"}
+                      fill
+                      className="object-cover md:rounded-tr-3xl md:rounded-br-3xl group-hover:scale-[1.02] transition-transform duration-300"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent md:rounded-tr-3xl md:rounded-br-3xl" />
+                  </motion.div>
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 to-white md:rounded-tr-3xl md:rounded-br-3xl" />
+                )}
+
+                {/* Hover details on image */}
+                <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-250 md:rounded-tr-3xl md:rounded-br-3xl">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent md:rounded-tr-3xl md:rounded-br-3xl" />
+                  <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 pointer-events-none">
+                    <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-white/70">
+                      {service.tag}
+                    </p>
+                    <p className="mt-2 text-xs sm:text-sm text-white/90 leading-relaxed line-clamp-3">
+                      {service.summary || service.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            )}
             </motion.article>
           </Link>
           );

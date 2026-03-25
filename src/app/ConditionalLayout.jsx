@@ -22,6 +22,18 @@ export default function ConditionalLayout({ children }) {
   const isRequestQueryPage = pathWithoutLocale === '/request-query';
   const isJobPostPage = pathWithoutLocale === '/job-post' || pathWithoutLocale?.startsWith('/job-post');
 
+  // Ensure each route starts at the top (fixes services pages opening mid-scroll)
+  useEffect(() => {
+    const isAdminPage = isBlogPostPage || isRequestQueryPage || isJobPostPage;
+    if (isAdminPage) return;
+    if (typeof window === 'undefined') return;
+
+    // If navigating to an anchored URL, let the browser handle it.
+    if (window.location.hash) return;
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [pathname, isBlogPostPage, isRequestQueryPage, isJobPostPage]);
+
   useEffect(() => {
     const isAdminPage = isBlogPostPage || isRequestQueryPage || isJobPostPage;
     

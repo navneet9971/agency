@@ -316,7 +316,8 @@ const ServiceDetailPage = () => {
     <main className="bg-white text-gray-900">
       {/* HERO SECTION */}
       <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white">
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,_rgba(209,213,219,0.35),_transparent_65%)]" />
+        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.14),_transparent_60%)]" />
+        <div className="pointer-events-none absolute -top-24 -right-24 h-64 w-64 rounded-full bg-emerald-200/30 blur-3xl" />
 
         <Section className="pt-8 sm:pt-10 md:pt-16 pb-12 sm:pb-16 md:pb-20 relative z-[1]">
           <div className="max-w-fullhd mx-auto">
@@ -334,12 +335,17 @@ const ServiceDetailPage = () => {
               </div>
             </motion.div>
 
-            <div className="grid gap-8 sm:gap-10 md:grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-start">
+            <div className="grid gap-8 sm:gap-10 md:grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] items-start">
               {/* Left: Content */}
               <motion.div {...fadeUp(0)} className="space-y-6">
-                <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-gray-600 backdrop-blur">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                  {service.tag}
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-emerald-700">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                    {service.tag}
+                  </span>
+                  <span className="inline-flex rounded-full border border-gray-200 bg-white/80 px-3 py-1 text-[11px] text-gray-600">
+                    {service.meta}
+                  </span>
                 </div>
 
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[2.7rem] font-semibold tracking-tight text-gray-900">
@@ -349,14 +355,6 @@ const ServiceDetailPage = () => {
                 <p className="text-xs sm:text-sm md:text-base text-gray-600 max-w-xl leading-relaxed">
                   {service.summary}
                 </p>
-
-                {/* Meta strip */}
-                <div className="flex flex-wrap gap-3 text-[11px] md:text-xs text-gray-600">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-3 py-1">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                    {service.meta}
-                  </div>
-                </div>
 
                 {/* CTAs */}
                 <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -373,7 +371,7 @@ const ServiceDetailPage = () => {
               {serviceImage && (
                 <motion.div
                   {...fadeUp(0.1)}
-                  className="relative rounded-3xl border border-gray-100 bg-white/80 backdrop-blur-sm shadow-[0_22px_55px_rgba(15,23,42,0.12)] overflow-hidden"
+                  className="relative rounded-3xl border border-gray-100 bg-white shadow-[0_22px_60px_rgba(15,23,42,0.12)] overflow-hidden"
                 >
                   <div className="relative h-60 md:h-72 lg:h-80">
                     <Image
@@ -383,6 +381,7 @@ const ServiceDetailPage = () => {
                       className="object-cover"
                       sizes="(min-width:1024px) 40vw, 100vw"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent" />
                   </div>
                 </motion.div>
               )}
@@ -402,7 +401,7 @@ const ServiceDetailPage = () => {
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
               Expected Outcome
             </h2>
-            <div className="rounded-2xl border border-gray-100 bg-gray-50/80 px-5 py-4 text-sm md:text-base text-gray-700">
+            <div className="rounded-2xl border border-gray-100 bg-white px-5 py-4 text-sm md:text-base text-gray-700 shadow-[0_14px_32px_rgba(15,23,42,0.04)]">
               {service.outcome}
             </div>
           </motion.div>
@@ -430,7 +429,8 @@ const ServiceDetailPage = () => {
       </Section>
 
       {/* KEY FEATURES SECTION */}
-      <Section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <Section className="py-12 sm:py-16 md:py-20 bg-gray-50 relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.08),_transparent_60%)]" />
         <div className="max-w-fullhd mx-auto space-y-8">
           <motion.div {...fadeUp(0)} className="max-w-3xl">
             <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
@@ -608,7 +608,8 @@ const ServiceDetailPage = () => {
 
       {/* RELATED SERVICES SECTION */}
       {services.length > 1 && (
-        <Section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <Section className="py-12 sm:py-16 md:py-20 bg-gray-50 relative overflow-hidden">
+          <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.10),_transparent_55%)]" />
           <div className="max-w-fullhd mx-auto space-y-8">
             <motion.div {...fadeUp(0)} className="max-w-3xl">
               <p className="text-[11px] uppercase tracking-[0.2em] text-gray-500 mb-3">
@@ -621,7 +622,7 @@ const ServiceDetailPage = () => {
 
             <motion.div
               {...fadeUp(0.05)}
-              className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3"
+              className="grid gap-4 sm:gap-5 md:grid-cols-2"
             >
               {services
                 .filter((s) => s.id !== serviceId)
@@ -633,12 +634,16 @@ const ServiceDetailPage = () => {
                     className="block"
                   >
                     <motion.div
-                      whileHover={{ y: -4 }}
-                      className="group rounded-2xl border border-gray-100 bg-white/80 backdrop-blur p-5 shadow-[0_14px_32px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_50px_rgba(15,23,42,0.08)] transition-all cursor-pointer"
+                      whileHover={{ y: -6 }}
+                      className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-[0_14px_32px_rgba(15,23,42,0.05)] hover:shadow-[0_22px_55px_rgba(15,23,42,0.10)] transition-all cursor-pointer"
                     >
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
+                      <div className="flex items-center gap-2 flex-wrap mb-4">
+                        <span className="inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] text-emerald-700">
+                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-600" />
                           {relatedService.tag}
+                        </span>
+                        <span className="inline-flex rounded-full border border-gray-200 bg-white px-2.5 py-1 text-[10px] text-gray-600">
+                          {relatedService.meta}
                         </span>
                       </div>
                       <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
@@ -647,8 +652,8 @@ const ServiceDetailPage = () => {
                       <p className="text-xs md:text-sm text-gray-600 line-clamp-2 leading-relaxed">
                         {relatedService.summary}
                       </p>
-                      <div className="mt-4 text-xs text-emerald-600 font-medium flex items-center gap-1">
-                        Learn more
+                      <div className="mt-5 text-xs text-emerald-700 font-medium flex items-center gap-2">
+                        Explore
                         <span className="group-hover:translate-x-1 transition-transform">→</span>
                       </div>
                     </motion.div>
