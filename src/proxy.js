@@ -17,7 +17,7 @@ export function proxy(request) {
     url.pathname = `/${defaultLocale}${pathname === '/' ? '' : pathname}`
     return NextResponse.redirect(url)
   }
-
+  
   return NextResponse.next()
 }
 
