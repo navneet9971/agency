@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "Tipsy AI 기반 대화 플랫폼"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "여행 및 비자 서비스",
+    "title": "비자 컨설팅 브랜드를 위한 고전환 웹사이트",
+    "heroTitle": "리드와 신뢰도를 높이기 위한 비자 컨설팅사의 신뢰 중심 모던 웹사이트 구축",
+    "snippet": "Newport Travels를 위해 신뢰 구축, 리드 생성, 서비스 명확성에 초점을 맞춘 전문 웹사이트를 기획하고 개발했습니다.",
+    "challenge": "고객사에는 강한 디지털 존재감이 부족했고, 경쟁이 치열한 비자 컨설팅 시장에서 신뢰를 쌓고 서비스를 분명히 전달하며 방문자를 리드로 전환할 수 있는 사이트가 필요했습니다.",
+    "solution": "명확한 CTA, 구조화된 서비스 페이지, 고객 후기 및 서비스 하이라이트 등 신뢰 요소를 갖춘 깔끔하고 모던한 사이트를 설계했으며, 상담과 문의로 사용자를 이끄는 데 중점을 두었습니다.",
+    "impact": "새 웹사이트는 브랜드를 전문적으로 포지셔닝하고 사용자 참여를 개선했으며, 꾸준한 고객 문의를 위한 기반을 마련했습니다.",
+    "services": [
+      "웹사이트 디자인",
+      "프론트엔드 개발",
+      "반응형 UI 개발",
+      "전환 최적화"
+    ],
+    "deliverables": [
+      "완전 반응형 웹사이트",
+      "서비스 랜딩 페이지",
+      "리드 수집 섹션",
+      "최적화된 UI/UX 디자인"
+    ],
+    "testimonial": {
+      "name": "Newport Travels 팀",
+      "quote": "웹사이트가 전문적으로 보이고 서비스를 분명히 보여 줍니다. 신규 고객과의 신뢰 형성과 문의 증가에 도움이 되었습니다."
+    },
+    "metric": "강화된 브랜드 신뢰도",
+    "meta": "2~3주",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Newport Travels 비자 컨설팅 웹사이트 디자인"
   }
 ]

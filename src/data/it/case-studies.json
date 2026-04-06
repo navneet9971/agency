@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "Piattaforma di conversazione alimentata da AI Tipsy"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "Viaggi e servizi per visti",
+    "title": "Sito web ad alta conversione per un brand di consulenza visti",
+    "heroTitle": "Un sito moderno incentrato sulla fiducia per una consulenza visti che aumenta lead e credibilità",
+    "snippet": "Abbiamo progettato e sviluppato un sito professionale per Newport Travels incentrato su fiducia, generazione lead e chiarezza dei servizi.",
+    "challenge": "Il cliente non aveva una forte presenza digitale e aveva bisogno di un sito che generasse fiducia, comunicasse chiaramente i servizi e trasformasse i visitatori in lead in un mercato competitivo della consulenza visti.",
+    "solution": "Abbiamo progettato un sito pulito e moderno con call-to-action efficaci, pagine servizio strutturate ed elementi di fiducia come testimonial e highlight dei servizi, guidando gli utenti verso consulenza e richiesta informazioni.",
+    "impact": "Il nuovo sito ha posizionato il brand in modo professionale, migliorato il coinvolgimento degli utenti e creato una base solida per richieste clienti costanti.",
+    "services": [
+      "Progettazione sito web",
+      "Sviluppo frontend",
+      "Sviluppo UI responsive",
+      "Ottimizzazione conversioni"
+    ],
+    "deliverables": [
+      "Sito completamente responsive",
+      "Landing page servizi",
+      "Sezioni cattura lead",
+      "Design UI/UX ottimizzato"
+    ],
+    "testimonial": {
+      "name": "Team Newport Travels",
+      "quote": "Il sito appare professionale e rappresenta chiaramente i nostri servizi. Ci ha aiutato a costruire fiducia con nuovi clienti e ad aumentare le richieste."
+    },
+    "metric": "Maggiore credibilità del brand",
+    "meta": "2–3 settimane",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Design del sito di consulenza visti Newport Travels"
   }
 ]

@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "Plataforma de conversación impulsada por IA Tipsy"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "Viajes y servicios de visados",
+    "title": "Sitio web de alta conversión para una marca de asesoría de visados",
+    "heroTitle": "Un sitio moderno centrado en la confianza para una asesoría de visados que aumenta clientes potenciales y credibilidad",
+    "snippet": "Diseñamos y desarrollamos un sitio profesional para Newport Travels centrado en generar confianza, captar leads y clarificar los servicios.",
+    "challenge": "El cliente carecía de una presencia digital sólida y necesitaba un sitio que generara confianza, comunicara claramente los servicios y convirtiera visitantes en leads en un mercado competitivo de asesoría de visados.",
+    "solution": "Diseñamos un sitio limpio y moderno con llamadas a la acción claras, páginas de servicio estructuradas y elementos de confianza como testimonios e información destacada de servicios, orientando a los usuarios hacia la consulta y el contacto.",
+    "impact": "El nuevo sitio posicionó la marca de forma profesional, mejoró la participación del usuario y creó una base sólida para generar consultas de clientes de forma constante.",
+    "services": [
+      "Diseño web",
+      "Desarrollo frontend",
+      "Desarrollo de interfaz responsive",
+      "Optimización de conversión"
+    ],
+    "deliverables": [
+      "Sitio totalmente responsive",
+      "Páginas de aterrizaje de servicios",
+      "Secciones de captación de leads",
+      "Diseño UI/UX optimizado"
+    ],
+    "testimonial": {
+      "name": "Equipo Newport Travels",
+      "quote": "El sitio se ve profesional y representa claramente nuestros servicios. Nos ha ayudado a generar confianza con nuevos clientes y a aumentar las consultas."
+    },
+    "metric": "Mayor credibilidad de marca",
+    "meta": "2–3 semanas",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Diseño web de asesoría de visados Newport Travels"
   }
 ]

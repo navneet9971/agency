@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "KI-gestützte Gesprächsplattform Tipsy"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "Reisen & Visumdienstleistungen",
+    "title": "Hochkonvertierende Website für eine Visa-Beratungsmarke",
+    "heroTitle": "Eine moderne, vertrauensfokussierte Website für eine Visa-Beratung, die Leads und Glaubwürdigkeit stärkt",
+    "snippet": "Wir haben eine professionelle Website für Newport Travels entwickelt – mit Fokus auf Vertrauen, Leadgewinnung und klare Darstellung der Leistungen.",
+    "challenge": "Der Kunde hatte keine starke digitale Präsenz und brauchte eine Website, die Vertrauen aufbaut, Leistungen verständlich erklärt und Besucher in einem wettbewerbsintensiven Visa-Beratungsmarkt in Leads verwandelt.",
+    "solution": "Wir gestalteten eine klare, moderne Website mit starken Call-to-Actions, strukturierten Service-Seiten und Vertrauenselementen wie Kundenstimmen und Service-Highlights – mit Fokus auf Beratungs- und Kontaktanfragen.",
+    "impact": "Die neue Website positioniert die Marke professionell, verbessert die Nutzerinteraktion und schafft eine solide Basis für kontinuierliche Kundenanfragen.",
+    "services": [
+      "Webdesign",
+      "Frontend-Entwicklung",
+      "Responsive UI-Entwicklung",
+      "Conversion-Optimierung"
+    ],
+    "deliverables": [
+      "Vollständig responsive Website",
+      "Service-Landingpages",
+      "Lead-Capture-Bereiche",
+      "Optimiertes UI/UX-Design"
+    ],
+    "testimonial": {
+      "name": "Team Newport Travels",
+      "quote": "Die Website wirkt professionell und stellt unsere Leistungen klar dar. Sie hat uns geholfen, Vertrauen bei neuen Kunden aufzubauen und mehr Anfragen zu erhalten."
+    },
+    "metric": "Stärkere Markenglaubwürdigkeit",
+    "meta": "2–3 Wochen",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Webdesign der Visa-Beratung Newport Travels"
   }
 ]

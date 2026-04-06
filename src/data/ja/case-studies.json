@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "Tipsy AI駆動会話プラットフォーム"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "旅行・ビザサービス",
+    "title": "ビザコンサルブランド向けの高コンバージョンウェブサイト",
+    "heroTitle": "リードと信頼を高める、ビザコンサルタント向けの信頼重視のモダンなウェブサイト構築",
+    "snippet": "Newport Travels のために、信頼醸成、リード獲得、サービスの明確化に焦点を当てたプロフェッショナルなウェブサイトを設計・開発しました。",
+    "challenge": "クライアントには十分なデジタル上の存在感がなく、競争の激しいビザコンサル市場で信頼を築き、サービスを明確に伝え、訪問者をリードに転換できるサイトが必要でした。",
+    "solution": "明確なCTA、構造化されたサービスページ、お客様の声やサービスハイライトなどの信頼要素を備えたクリーンでモダンなサイトを設計。相談・問い合わせへユーザーを導くことに重点を置きました。",
+    "impact": "新サイトはブランドをプロフェッショナルに位置づけ、ユーザーエンゲージメントを改善し、継続的なお問い合わせの基盤を整えました。",
+    "services": [
+      "ウェブデザイン",
+      "フロントエンド開発",
+      "レスポンシブUI開発",
+      "コンバージョン最適化"
+    ],
+    "deliverables": [
+      "完全レスポンシブサイト",
+      "サービスランディングページ",
+      "リード獲得セクション",
+      "最適化されたUI/UXデザイン"
+    ],
+    "testimonial": {
+      "name": "Newport Travels チーム",
+      "quote": "サイトはプロフェッショナルに見え、サービスを明確に表現しています。新規顧客との信頼構築と問い合わせ増加に役立ちました。"
+    },
+    "metric": "ブランド信頼性の強化",
+    "meta": "2〜3週間",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Newport Travels ビザコンサルタント向けウェブサイトデザイン"
   }
 ]

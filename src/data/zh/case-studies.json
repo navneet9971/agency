@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "Tipsy AI驱动的对话平台"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "旅行与签证服务",
+    "title": "为签证咨询品牌打造的高转化网站",
+    "heroTitle": "为签证咨询公司打造注重信任、提升潜在客户与品牌公信力的现代化网站",
+    "snippet": "我们为 Newport Travels 设计并开发了专业网站，聚焦信任建设、潜在客户获取与服务清晰呈现。",
+    "challenge": "客户缺乏有力的线上形象，需要一个能够建立信任、清晰传达服务并在竞争激烈的签证咨询市场中将访客转化为潜在客户的网站。",
+    "solution": "我们设计了简洁现代的网站，包含明确的行动号召、结构化的服务页面以及客户评价与服务亮点等信任元素，引导用户预约咨询与留言。",
+    "impact": "新网站以专业形象呈现品牌，提升了用户参与度，并为持续获取客户咨询打下坚实基础。",
+    "services": [
+      "网站设计",
+      "前端开发",
+      "响应式界面开发",
+      "转化优化"
+    ],
+    "deliverables": [
+      "全响应式网站",
+      "服务落地页",
+      "潜在客户收集模块",
+      "优化的 UI/UX 设计"
+    ],
+    "testimonial": {
+      "name": "Newport Travels 团队",
+      "quote": "网站看起来很专业，清晰展现了我们的服务，帮助我们赢得新客户信任并提升了咨询量。"
+    },
+    "metric": "更强的品牌公信力",
+    "meta": "2–3 周",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Newport Travels 签证咨询网站设计"
   }
 ]

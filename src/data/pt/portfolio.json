@@ -43,6 +43,15 @@
     "url": "https://www.adsenviro.in",
     "image": "/casestudy/a.png",
     "imageAlt": "Pré-visualização do site web da ADS Enviro Group"
+  },
+  {
+    "id": "newport-travels",
+    "brand": "Newport Travels",
+    "title": "Site de alta conversão para uma marca de consultoria de vistos",
+    "snippet": "Site profissional focado em confiança, geração de leads e comunicação clara dos serviços, para consultoria de vistos e agência de viagens.",
+    "url": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "imageAlt": "Pré-visualização do site de consultoria de vistos Newport Travels"
   }
 ]
 

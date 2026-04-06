@@ -199,5 +199,39 @@
   "image": "/casestudy/tipsy.png",
   "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
   "imageAlt": "Tipsy AI-powered conversation platform"
+},
+{
+  "id": "newport-travels-website",
+  "client": "Newport Travels",
+  "industry": "Travel & Visa Services",
+  "title": "High-converting website for a visa consultancy brand",
+  "heroTitle": "Building a modern, trust-focused website for a visa consultancy to increase leads and credibility",
+  "snippet": "We designed and developed a professional website for Newport Travels focused on trust-building, lead generation, and service clarity.",
+  "challenge": "The client lacked a strong digital presence and needed a website that could build trust, clearly communicate services, and convert visitors into leads in a competitive visa consultancy market.",
+  "solution": "We designed a clean, modern website with strong call-to-actions, structured service pages, and trust-building elements like testimonials and service highlights. The focus was on guiding users toward consultation and inquiry.",
+  "impact": "The new website positioned the brand professionally, improved user engagement, and created a strong foundation for generating consistent client inquiries.",
+  "services": [
+    "Website design",
+    "Frontend development",
+    "Responsive UI development",
+    "Conversion optimization"
+  ],
+  "deliverables": [
+    "Fully responsive website",
+    "Service landing pages",
+    "Lead capture sections",
+    "Optimized UI/UX design"
+  ],
+  "testimonial": {
+    "name": "Newport Travels Team",
+    "quote": "The website looks professional and clearly represents our services. It has helped us build trust with new clients and improve inquiries."
+  },
+  "metric": "Stronger brand credibility",
+  "meta": "2–3 weeks",
+  "href": "/case-studies/newport-travels-website",
+  "liveUrl": "https://www.newportravels.com/",
+  "image": "/casestudy/newport.png",
+  "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+  "imageAlt": "Newport Travels visa consultancy website design"
 }
 ]

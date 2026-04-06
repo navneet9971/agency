@@ -43,6 +43,15 @@
     "url": "https://www.adsenviro.in",
     "image": "/casestudy/a.png",
     "imageAlt": "Предпросмотр веб-сайта ADS Enviro Group"
+  },
+  {
+    "id": "newport-travels",
+    "brand": "Newport Travels",
+    "title": "Высококонверсионный сайт для бренда визового консалтинга",
+    "snippet": "Профессиональный сайт с акцентом на доверие, генерацию лидов и ясную коммуникацию услуг для визового консалтинга и турагентства.",
+    "url": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "imageAlt": "Предпросмотр сайта визового консалтинга Newport Travels"
   }
 ]
 

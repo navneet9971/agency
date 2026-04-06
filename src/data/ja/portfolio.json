@@ -43,6 +43,15 @@
     "url": "https://www.adsenviro.in",
     "image": "/casestudy/a.png",
     "imageAlt": "ADS Enviro Groupウェブサイトのプレビュー"
+  },
+  {
+    "id": "newport-travels",
+    "brand": "Newport Travels",
+    "title": "ビザコンサルブランド向けの高コンバージョンウェブサイト",
+    "snippet": "ビザコンサルタント・旅行代理店向けに、信頼醸成、リード獲得、サービスの明確な伝達に重点を置いたプロフェッショナルなサイト。",
+    "url": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "imageAlt": "Newport Travels ビザコンサルサイトのプレビュー"
   }
 ]
 

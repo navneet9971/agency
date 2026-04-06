@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "Plataforma de conversa alimentada por IA Tipsy"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "Viagens e serviços de vistos",
+    "title": "Site de alta conversão para uma marca de consultoria de vistos",
+    "heroTitle": "Um site moderno focado em confiança para uma consultoria de vistos que aumenta leads e credibilidade",
+    "snippet": "Desenvolvemos um site profissional para a Newport Travels com foco em confiança, geração de leads e clareza dos serviços.",
+    "challenge": "O cliente não tinha uma presença digital forte e precisava de um site que gerasse confiança, comunicasse claramente os serviços e convertesse visitantes em leads num mercado competitivo de consultoria de vistos.",
+    "solution": "Criámos um site limpo e moderno com chamadas para ação claras, páginas de serviço estruturadas e elementos de confiança como testemunhos e destaques de serviços, orientando os utilizadores para consulta e contacto.",
+    "impact": "O novo site posicionou a marca de forma profissional, melhorou o envolvimento dos utilizadores e criou uma base sólida para consultas de clientes consistentes.",
+    "services": [
+      "Design de sites",
+      "Desenvolvimento frontend",
+      "Desenvolvimento de UI responsiva",
+      "Otimização de conversão"
+    ],
+    "deliverables": [
+      "Site totalmente responsivo",
+      "Páginas de destino de serviços",
+      "Secções de captura de leads",
+      "Design UI/UX otimizado"
+    ],
+    "testimonial": {
+      "name": "Equipa Newport Travels",
+      "quote": "O site parece profissional e representa claramente os nossos serviços. Ajudou-nos a ganhar a confiança de novos clientes e a aumentar os contactos."
+    },
+    "metric": "Maior credibilidade da marca",
+    "meta": "2–3 semanas",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Design do site de consultoria de vistos Newport Travels"
   }
 ]

@@ -43,6 +43,15 @@
     "url": "https://www.adsenviro.in",
     "image": "/casestudy/a.png",
     "imageAlt": "ADS Enviro Group 웹사이트 미리보기"
+  },
+  {
+    "id": "newport-travels",
+    "brand": "Newport Travels",
+    "title": "비자 컨설팅 브랜드를 위한 고전환 웹사이트",
+    "snippet": "비자 컨설팅 및 여행사를 위해 신뢰 구축, 리드 생성, 서비스 소통 명확성에 초점을 맞춘 전문 웹사이트입니다.",
+    "url": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "imageAlt": "Newport Travels 비자 컨설팅 웹사이트 미리보기"
   }
 ]
 

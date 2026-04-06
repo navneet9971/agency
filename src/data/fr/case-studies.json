@@ -194,5 +194,39 @@
     "image": "/casestudy/tipsy.png",
     "images": ["/casestudy/t1.png", "/casestudy/t2.png"],
     "imageAlt": "Plateforme de conversation alimentée par l'IA Tipsy"
+  },
+  {
+    "id": "newport-travels-website",
+    "client": "Newport Travels",
+    "industry": "Voyage et services de visas",
+    "title": "Site web à fort taux de conversion pour une marque de conseil en visas",
+    "heroTitle": "Création d'un site moderne axé sur la confiance pour un conseiller en visas afin d'augmenter les prospects et la crédibilité",
+    "snippet": "Nous avons conçu et développé un site professionnel pour Newport Travels axé sur la confiance, la génération de leads et la clarté des services.",
+    "challenge": "Le client manquait de présence numérique solide et avait besoin d'un site qui inspire confiance, présente clairement les services et transforme les visiteurs en leads sur un marché concurrentiel du conseil en visas.",
+    "solution": "Nous avons conçu un site épuré et moderne avec des appels à l'action forts, des pages de services structurées et des éléments de confiance (témoignages, mise en avant des services), en guidant les utilisateurs vers la consultation et la prise de contact.",
+    "impact": "Le nouveau site positionne la marque de façon professionnelle, améliore l'engagement des utilisateurs et crée une base solide pour des demandes clients régulières.",
+    "services": [
+      "Conception web",
+      "Développement frontend",
+      "Développement d'interface responsive",
+      "Optimisation de la conversion"
+    ],
+    "deliverables": [
+      "Site entièrement responsive",
+      "Pages de destination services",
+      "Sections de capture de leads",
+      "Design UI/UX optimisé"
+    ],
+    "testimonial": {
+      "name": "Équipe Newport Travels",
+      "quote": "Le site paraît professionnel et représente clairement nos services. Il nous a aidés à gagner la confiance de nouveaux clients et à augmenter les demandes."
+    },
+    "metric": "Crédibilité de marque renforcée",
+    "meta": "2–3 semaines",
+    "href": "/case-studies/newport-travels-website",
+    "liveUrl": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "images": ["/casestudy/newport.png", "/casestudy/newport-2.png"],
+    "imageAlt": "Conception du site de conseil en visas Newport Travels"
   }
 ]

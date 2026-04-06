@@ -43,6 +43,15 @@
     "url": "https://www.adsenviro.in",
     "image": "/casestudy/a.png",
     "imageAlt": "ADS Enviro Group网站预览"
+  },
+  {
+    "id": "newport-travels",
+    "brand": "Newport Travels",
+    "title": "为签证咨询品牌打造的高转化网站",
+    "snippet": "面向签证咨询与旅行社的专业网站，注重信任建设、潜在客户开发与服务清晰传达。",
+    "url": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "imageAlt": "Newport Travels 签证咨询网站预览"
   }
 ]
 

@@ -43,6 +43,15 @@
     "url": "https://www.adsenviro.in",
     "image": "/casestudy/a.png",
     "imageAlt": "معاينة موقع ADS Enviro Group"
+  },
+  {
+    "id": "newport-travels",
+    "brand": "Newport Travels",
+    "title": "موقع عالي التحويل لعلامة استشارات تأشيرات",
+    "snippet": "موقع احترافي يركّز على بناء الثقة وتوليد العملاء المحتملين وتوضيح الخدمات، لشركة استشارات تأشيرات ووكالة سفر.",
+    "url": "https://www.newportravels.com/",
+    "image": "/casestudy/newport.png",
+    "imageAlt": "معاينة موقع استشارات تأشيرات Newport Travels"
   }
 ]
 
