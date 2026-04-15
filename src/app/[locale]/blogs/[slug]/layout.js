@@ -1,9 +1,11 @@
-import { Metadata } from 'next';
 import { connectToDatabase } from '@/lib/mongodb';
 import { generateArticleMetadata as generateSEO } from '@/lib/seo';
 import { locales } from '@/lib/i18n';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://swagatamtech.com';
+
+/** ISR: refresh metadata periodically so titles/descriptions stay aligned with CMS. */
+export const revalidate = 3600;
 
 export async function generateMetadata({ params }) {
   try {

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed:seo-blogs": "node scripts/seed-seo-blogs.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

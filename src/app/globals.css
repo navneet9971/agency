@@ -50,3 +50,19 @@ img[alt*="logo"] {
   background-color: transparent !important;
   background: transparent !important;
 }
+
+/* CMS blog HTML — link styling without client-only injected <style> */
+.blog-content a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease;
+}
+
+.blog-content a:hover {
+  color: #1d4ed8 !important;
+}
+
+.blog-content a:visited {
+  color: #7c3aed !important;
+}

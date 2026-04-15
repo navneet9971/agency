@@ -1,0 +1,67 @@
+[
+  {
+    "slug": "nextjs-dynamic-routes-seo-indexing",
+    "locale": "en",
+    "title": "Next.js Dynamic Routes: SEO, Indexing, and What Google Actually Sees",
+    "metaTitle": "Next.js Dynamic Routes SEO & Google Indexing Guide | Swagatam Tech",
+    "metaDescription": "Why dynamic blog URLs sometimes miss the sitemap, how generateMetadata and sitemaps work together, and practical fixes for crawlable, indexable pages.",
+    "excerpt": "Dynamic routes are not bad for SEO—missing server metadata and sitemap entries are. Here is a clear playbook for Next.js App Router blogs.",
+    "keywords": "Next.js SEO, dynamic routes, sitemap.xml, Google indexing, App Router, generateMetadata",
+    "author": "Swagatam Tech",
+    "featuredImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80",
+    "createdAt": "2026-03-10T10:00:00.000Z",
+    "content": "<h2>Dynamic is not the problem</h2><p>Search engines can crawl JavaScript, but they still prefer a fast, consistent story: a stable URL, accurate <code>&lt;title&gt;</code> and meta description in the initial HTML, and a discoverable link graph. Dynamic routes such as <code>/en/blogs/[slug]</code> are fine when those pieces align.</p><h2>Common indexing gaps</h2><ul><li><strong>Sitemap built without your CMS data at build time</strong>, so Google never receives the list of article URLs.</li><li><strong>Metadata only set in the browser</strong> after a client fetch—use server <code>generateMetadata</code> for the document head.</li><li><strong>Locale and canonical mismatches</strong> between the URL users see and what you declare as canonical.</li></ul><h2>What to implement</h2><p>Generate sitemap entries from the same database (or static export data) you use for publishing. Pair that with server-rendered metadata and internal links from your blog index to every post. After deploy, submit <code>sitemap.xml</code> in Google Search Console and monitor <em>Pages</em> and <em>Sitemaps</em> reports.</p><p>For product and marketing sites we ship, we treat the sitemap as part of the release checklist—not an afterthought.</p>"
+  },
+  {
+    "slug": "core-web-vitals-seo-practical-guide",
+    "locale": "en",
+    "title": "Core Web Vitals for SEO: A Practical Guide for Marketing Sites",
+    "metaTitle": "Core Web Vitals & SEO: LCP, INP, CLS Explained | Swagatam Tech",
+    "metaDescription": "How Largest Contentful Paint, Interaction to Next Paint, and Cumulative Layout Shift relate to UX and SEO—and what to fix first on a typical agency site.",
+    "excerpt": "Core Web Vitals connect real user experience to how competitive your pages feel in search. Focus on the metrics that move the needle.",
+    "keywords": "Core Web Vitals, LCP, INP, CLS, page speed SEO, Next.js performance",
+    "author": "Swagatam Tech",
+    "featuredImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+    "createdAt": "2026-03-14T11:00:00.000Z",
+    "content": "<h2>Why Google cares</h2><p>Core Web Vitals summarize loading, interactivity, and visual stability. They are not the only ranking factors, but slow, janky pages lose engagement—which indirectly hurts SEO.</p><h2>LCP (Largest Contentful Paint)</h2><p>Optimize your hero image: correct dimensions, modern formats (AVIF/WebP), and avoid lazy-loading the main above-the-fold image. For Next.js, use the <code>Image</code> component with sensible <code>sizes</code>.</p><h2>INP (Interaction to Next Paint)</h2><p>Long tasks and heavy third-party scripts block responsiveness. Defer analytics, audit tag managers, and split client bundles so critical routes stay lean.</p><h2>CLS (Cumulative Layout Shift)</h2><p>Reserve space for images, embeds, and fonts. Sudden layout jumps frustrate users and inflate CLS.</p><h2>Prioritize fixes</h2><ol><li>Measure in Search Console and Lighthouse.</li><li>Fix regressions before adding new marketing scripts.</li><li>Re-test after each major release.</li></ol>"
+  },
+  {
+    "slug": "structured-data-json-ld-for-blogs",
+    "locale": "en",
+    "title": "Structured Data (JSON-LD) for Blogs: BlogPosting and Breadcrumbs",
+    "metaTitle": "JSON-LD Structured Data for Blog SEO | Swagatam Tech",
+    "metaDescription": "Use BlogPosting and BreadcrumbList schema to clarify your articles for Google. Learn what to include and how to keep JSON-LD in sync with visible content.",
+    "excerpt": "Structured data helps search engines understand entities on the page—when it matches what users see, rich results become more reliable.",
+    "keywords": "JSON-LD, structured data, BlogPosting schema, breadcrumb schema, technical SEO",
+    "author": "Swagatam Tech",
+    "featuredImage": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=80",
+    "createdAt": "2026-03-18T09:30:00.000Z",
+    "content": "<h2>Start with BlogPosting</h2><p>For articles, <code>BlogPosting</code> (or <code>Article</code>) should include headline, description, dates, author, publisher, and a representative image URL that resolves with 200 OK.</p><h2>Add BreadcrumbList</h2><p>Breadcrumbs should mirror real navigation and use the same locale-prefixed URLs as your site—for example <code>/en/blogs</code> rather than a non-existent bare <code>/blogs</code> path if your app always uses locale segments.</p><h2>Quality over volume</h2><p>Invalid JSON, wrong types, or content that contradicts the visible page can nullify benefits. Validate with Rich Results Test and fix warnings you agree with—not every warning needs action.</p><p>Use structured data as a precise summary of the page, not a keyword stuffing channel.</p>"
+  },
+  {
+    "slug": "internal-linking-for-agency-websites",
+    "locale": "en",
+    "title": "Internal Linking for Agency Websites: Hub Pages, Services, and Case Studies",
+    "metaTitle": "Internal Linking Strategy for Agency SEO | Swagatam Tech",
+    "metaDescription": "How to connect services, case studies, and blog content so crawlers discover depth, PageRank flows sensibly, and users find the next best action.",
+    "excerpt": "Internal links distribute authority and define site structure. A clear hierarchy beats orphan pages every time.",
+    "keywords": "internal linking, site architecture, SEO hub pages, agency website, crawl budget",
+    "author": "Swagatam Tech",
+    "featuredImage": "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=1200&q=80",
+    "createdAt": "2026-03-22T14:15:00.000Z",
+    "content": "<h2>Design hubs, not islands</h2><p>Your homepage, primary services, and blog index should each link outward to deeper content. Case studies should link back to relevant services; blog posts should reference offerings when it helps the reader—not as forced keyword blocks.</p><h2>Use descriptive anchors</h2><p>Avoid generic “click here.” Prefer anchors that describe the destination, which helps users and reinforces topical relevance.</p><h2>Watch for orphan URLs</h2><p>If a URL exists only in <code>sitemap.xml</code> but has no internal links, it can still be indexed—but discovery and prioritization improve when the page sits in a natural link path.</p><h2>Practical cadence</h2><p>When you publish a new article, add one or two contextual links from older related posts during the same sprint. Small, steady improvements compound.</p>"
+  },
+  {
+    "slug": "google-search-console-sitemaps-indexing",
+    "locale": "en",
+    "title": "Google Search Console: Sitemaps, Coverage, and Fixing “Crawled / Not Indexed”",
+    "metaTitle": "Google Search Console: Sitemaps & Indexing Issues | Swagatam Tech",
+    "metaDescription": "Use GSC sitemaps and Page indexing reports to diagnose why URLs are not indexed. Learn the difference between discovery, crawl, and index eligibility.",
+    "excerpt": "Search Console shows what Google decided—not what you wish were true. Learn to read coverage states and act on them.",
+    "keywords": "Google Search Console, sitemap submission, crawled not indexed, URL inspection, SEO diagnostics",
+    "author": "Swagatam Tech",
+    "featuredImage": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80",
+    "createdAt": "2026-03-28T16:45:00.000Z",
+    "content": "<h2>Submit your sitemap once it is truthful</h2><p>Your sitemap should enumerate URLs that return 200, match canonical tags, and reflect published content. After major template changes, regenerate and re-submit if your workflow is manual.</p><h2>URL Inspection is your ground truth</h2><p>Test a sample of blog URLs. Confirm “Google-selected canonical” matches your marketing URL. If alternate duplicates exist, consolidate with redirects or consistent canonicals.</p><h2>“Crawled – currently not indexed”</h2><p>This often signals quality or duplication signals—not a technical crawl block. Improve differentiation, depth, and internal links; avoid thin templated pages.</p><h2>Dynamic sites can rank</h2><p>Dynamic rendering is acceptable when metadata, content, and hreflang/canonicals are correct and the sitemap lists final URLs. Treat indexing as an engineering plus editorial responsibility.</p>"
+  }
+]

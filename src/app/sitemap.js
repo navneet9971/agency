@@ -1,6 +1,33 @@
 import { locales } from '@/lib/i18n';
+import { connectToDatabase } from '@/lib/mongodb';
 
 const serviceIds = ['strategy', 'ux-ui', 'development', 'cms', 'performance', 'support'];
+
+/**
+ * Load published blog slugs for the sitemap (build-time + runtime).
+ * Uses MongoDB directly so blog URLs are included during `next build` (HTTP fetch to
+ * baseUrl/api/blogs often fails or is skipped in CI, which left dynamic posts out of sitemap.xml).
+ */
+async function getPublishedBlogsForSitemap() {
+  try {
+    const { db } = await connectToDatabase();
+    const blogs = await db
+      .collection('blogs')
+      .find({ status: 'published' })
+      .project({ slug: 1, updatedAt: 1, createdAt: 1 })
+      .toArray();
+
+    const bySlug = new Map();
+    for (const b of blogs) {
+      if (!b?.slug || typeof b.slug !== 'string') continue;
+      bySlug.set(b.slug, b);
+    }
+    return [...bySlug.values()];
+  } catch (e) {
+    console.warn('Sitemap: could not load blogs from database:', e?.message || e);
+    return [];
+  }
+}
 
 /**
  * Sitemap Generator – SEO: URLs must match actual routes (all locales in path, including /en)
@@ -30,31 +57,7 @@ export default async function sitemap() {
     '/bussines-consultancy',
   ];
 
-  // 2️⃣ Fetch ONLY published blogs
-  // STATIC EXPORT NOTE: For static export, API routes don't work
-  // You need to either:
-  // 1. Import blog data directly from a JSON file/data source
-  // 2. Use ISR (Incremental Static Regeneration)
-  // 3. Fetch from external API at build time
-  // 
-  // For now, we'll try to fetch but handle gracefully if it fails
-  let blogData = [];
-  try {
-    // Only fetch if not in static export mode
-    if (process.env.NEXT_PHASE !== 'phase-production-build') {
-      const res = await fetch(
-        `${baseUrl}/api/blogs?status=published`,
-        { cache: "no-store" }
-      );
-      const data = await res.json();
-      blogData = data.blogs || [];
-    }
-  } catch (error) {
-    // In static export, API routes aren't available
-    // You should import blog data directly instead
-    console.warn('Could not fetch blogs for sitemap (expected in static export)');
-    blogData = [];
-  }
+  const blogData = await getPublishedBlogsForSitemap();
 
   const entries = [];
 
